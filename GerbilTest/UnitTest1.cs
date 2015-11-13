@@ -26,7 +26,8 @@ namespace GerbilTest
         public void TestServiceInit()
         {
             Gerbil.Gerbil_PortServices.PortLookup.initServices();
-            int[] testPorts = { 80 };
+			int[] testPorts = new int[1];
+			testPorts[0] = 80;
             try
             {
                 Assert.AreEqual(Gerbil.Gerbil_PortServices.PortLookup.getServices(testPorts)[0], "HTTP");
